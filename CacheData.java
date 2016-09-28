@@ -5,11 +5,10 @@ package cyrusLRUCache;
  */
 public class CacheData {
     private Object data;
-    private int count;
+    private int count = 0;
 
     public CacheData(Object data) {
         this.data = data;
-        this.count = 0;
     }
 
     public Object getData() {
@@ -26,6 +25,14 @@ public class CacheData {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    @Override
+    public String toString() {
+        return "CacheData{" +
+                "data=" + data +
+                ", count=" + getCount() +
+                '}';
     }
 }
 
